@@ -1,29 +1,16 @@
-class Animal:
-    def __init__(self, name, age, color, weight):
-        self.name = name
-        self.age = age
-        self.color = color
-        self.weight = weight
-    def breath(self):
-        print("дихає")
-    def move(self):
-        print("бігає")
-class Dog(Animal):
-    def voice(self):
-        print("Гавкає!")
-class Cat(Animal):
-            ...
-# Створення екземпляра класу "Собака"
-my_bird = Animal("Вуді", 70, "синьо-білий", 120)
-print(my_bird.name)
-bobik = Dog("Бобініо", 3, "красівий", 60000)
-murchik = Cat("Мурчелло", 10, "срібний табі", 3700)
-print(murchik.color)#атрибут об'єкта
-bobik.weight = 42000
-bobik.height = 60
-print(bobik.height)
-print(bobik.weight)
-# #методи
-bobik.breath()
-bobik.voice()
-murchik.move()
+# Завдання 3
+# Створіть клас Book з атрибутами title (назва книги), author (автор) та genre (жанр). Додайте метод
+# display_info, який виведе інформацію про книгу у вигляді "Назва: {title}, Автор: {author}, Жанр: {genre}".
+
+class display_info:
+    def __init__(self, title, author, genre):
+        self.title = title
+        self.author = author
+        self.genre = genre
+
+    def print_info(self):
+        print(f"Назва книги: {self.title}, Автор: {self.author}, Жанр: {self.genre}")
+
+# Створення екземпляра класу
+my_display_info = display_info("Кобзар", "Т. Г. Шевченко", "вірші")
+my_display_info.print_info()
