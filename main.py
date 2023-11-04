@@ -13,25 +13,32 @@ class People:
         self.country = country
         self.home_address = home_address
 
-    def full_namee(self):
-        return self.full__name
+    def get_full_name(self):
+        return self.full_name
 
-    def date_of_birth(self):
-        return self.date__of__birth
+    def get_date_of_birth(self):
+        return self.date_of_birth
 
-    def contact_phone_number(self):
-        return self.contact__phone__number
+    def get_contact_phone_number(self):
+        return self.contact_phone_number
 
-    def city(self):
-        return self.__city
+    def get_city(self):
+        return self.city
 
-    def country(self):
-        return self.__country
+    def get_country(self):
+        return self.country
 
-    def home_address(self):
-        return self.home__address
-
+    def get_home_address(self):
+        return self.home_address
 
 # Створення екземпляра класу
-event = People("Шевченко Т.Г.", "2010-03-09", "0661234567", "Київ",
+person = People("Шевченко Т.Г.", "2010-03-09", "0661234567", "Київ",
                "Україна", "вул. Листопадна буд. 4")
+
+# Виведення інформації про Людину
+print(f"ПІБ: {person.get_full_name()}")
+print(f"Дата народження: {person.get_date_of_birth()}")
+print(f"Контактний телефон: {person.get_contact_phone_number()}")
+print(f"Місто: {person.get_city()}")
+print(f"Країна: {person.get_country()}")
+print(f"Домашня адреса: {person.get_home_address()}")
