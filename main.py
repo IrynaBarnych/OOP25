@@ -1,34 +1,37 @@
-# Завдання 5
-# Створіть клас BankAccount з атрибутами balance та owner, а також методами deposit та withdraw для
-# здійснення операцій з балансом. Реалізуйте перевірку на те, що баланс не може стати від'ємним.
+#Завдання 1
+#Реалізуйте клас «Людина». Збережіть у класі: ПІБ,
+#дату народження, контактний телефон, місто, країну, домашню адресу.
+# Реалізуйте методи класу для введення-виведення даних та інших операцій.
 
 
-class BankAccount:
-    def __init__(self, balance, owner):
-        self.balance = balance
-        self.owner = owner
+class People:
+    def __init__(self, full_name, date_of_birth, contact_phone_number, city, country, home_address):
+        self.full_name = full_name
+        self.date_of_birth = date_of_birth
+        self.contact_phone_number = contact_phone_number
+        self.city = city
+        self.country = country
+        self.home_address = home_address
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-        else:
-            print("Сума повинна бути більше 0")
+    def full_namee(self):
+        return self.full__name
 
-    def withdraw(self, amount):
-        if amount > 0:
-            if amount <= self.balance:
-                self.balance -= amount
-            else:
-                print("Недостатньо коштів на рахунку")
-        else:
-            print("Сума повинна бути більше 0")
+    def date_of_birth(self):
+        return self.date__of__birth
 
-    def get_balance(self):
-        return self.balance
+    def contact_phone_number(self):
+        return self.contact__phone__number
+
+    def city(self):
+        return self.__city
+
+    def country(self):
+        return self.__country
+
+    def home_address(self):
+        return self.home__address
 
 
 # Створення екземпляра класу
-account = BankAccount(1000, "John")
-account.deposit(500)
-account.withdraw(200)
-print(account.get_balance())
+event = People("Шевченко Т.Г.", "2010-03-09", "0661234567", "Київ",
+               "Україна", "вул. Листопадна буд. 4")
