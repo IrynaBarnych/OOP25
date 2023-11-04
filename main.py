@@ -1,44 +1,43 @@
-#Завдання 1
-#Реалізуйте клас «Людина». Збережіть у класі: ПІБ,
-#дату народження, контактний телефон, місто, країну, домашню адресу.
+# Завдання 2
+# Створіть клас «Місто». Збережіть у класі: назву міста, назву регіону, назву країни, кількість жителів у місті,
+# поштовий індекс міста, телефонний код міста.
 # Реалізуйте методи класу для введення-виведення даних та інших операцій.
 
 
-class People:
-    def __init__(self, full_name, date_of_birth, contact_phone_number, city, country, home_address):
-        self.full_name = full_name
-        self.date_of_birth = date_of_birth
-        self.contact_phone_number = contact_phone_number
-        self.city = city
-        self.country = country
-        self.home_address = home_address
+class City:
+    def __init__(self, city_name, region, country_name, population, postal_code, city_code):
+        self.city_name = city_name
+        self.region = region
+        self.country_name = country_name
+        self.population = population
+        self.postal_code = postal_code
+        self.city_code = city_code
 
-    def get_full_name(self):
-        return self.full_name
+    def get_city_name(self):
+        return self.city_name
 
-    def get_date_of_birth(self):
-        return self.date_of_birth
+    def get_region(self):
+        return self.region
 
-    def get_contact_phone_number(self):
-        return self.contact_phone_number
+    def get_country_name(self):
+        return self.country_name
+    def get_population(self):
+        return self.population
 
-    def get_city(self):
-        return self.city
+    def get_postal_code(self):
+        return self.postal_code
 
-    def get_country(self):
-        return self.country
-
-    def get_home_address(self):
-        return self.home_address
+    def get_city_code(self):
+        return self.city_code
 
 # Створення екземпляра класу
-person = People("Шевченко Т.Г.", "2010-03-09", "0661234567", "Київ",
-               "Україна", "вул. Листопадна буд. 4")
+City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
+               "01000", "044")
 
 # Виведення інформації про Людину
-print(f"ПІБ: {person.get_full_name()}")
-print(f"Дата народження: {person.get_date_of_birth()}")
-print(f"Контактний телефон: {person.get_contact_phone_number()}")
-print(f"Місто: {person.get_city()}")
-print(f"Країна: {person.get_country()}")
-print(f"Домашня адреса: {person.get_home_address()}")
+print(f"Назва міста: {City1.get_city_name()}")
+print(f"Назва регіону: {City1.get_region()}")
+print(f"Назва країни: {City1.get_country_name()}")
+print(f"Кількість жителів у місті: {City1.get_population()}")
+print(f"Поштовий індекс: {City1.get_postal_code()}")
+print(f"Код міста: {City1.get_city_code()}")
