@@ -1,43 +1,46 @@
-# Завдання 2
-# Створіть клас «Місто». Збережіть у класі: назву міста, назву регіону, назву країни, кількість жителів у місті,
-# поштовий індекс міста, телефонний код міста.
+# Завдання 3
+# Створіть клас «Країна».
+# Збережіть у класі: назву країни, назву континенту, кількість жителів країни, телефонний код країни,
+# назву столиці, назву міст країни.
 # Реалізуйте методи класу для введення-виведення даних та інших операцій.
 
 
-class City:
-    def __init__(self, city_name, region, country_name, population, postal_code, city_code):
-        self.city_name = city_name
-        self.region = region
-        self.country_name = country_name
+class Country:
+    def __init__(self, name, continent, country_code, population, capital, cities):
+        self.name = name
+        self.continent = continent
         self.population = population
-        self.postal_code = postal_code
-        self.city_code = city_code
+        self.country_code = country_code
+        self.capital = capital
+        self.cities = cities
 
-    def get_city_name(self):
-        return self.city_name
+    def get_name(self):
+        return self.name
 
-    def get_region(self):
-        return self.region
+    def get_continent(self):
+        return self.continent
 
-    def get_country_name(self):
-        return self.country_name
     def get_population(self):
         return self.population
 
-    def get_postal_code(self):
-        return self.postal_code
+    def get_country_code(self):
+        return self.country_code
 
-    def get_city_code(self):
-        return self.city_code
+    def get_capital(self):
+        return self.capital
+
+    def get_cities(self):
+        return self.cities
 
 # Створення екземпляра класу
-City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
-               "01000", "044")
+Country1 = Country("Україна", "Європа", "44 млн.", "+380",
+               "Київ", "Харків, Херсон, Миколаїв, Одеса")
 
-# Виведення інформації про Людину
-print(f"Назва міста: {City1.get_city_name()}")
-print(f"Назва регіону: {City1.get_region()}")
-print(f"Назва країни: {City1.get_country_name()}")
-print(f"Кількість жителів у місті: {City1.get_population()}")
-print(f"Поштовий індекс: {City1.get_postal_code()}")
-print(f"Код міста: {City1.get_city_code()}")
+# Виведення інформації про Країну
+print(f"Назва країни: {Country1.get_name()}")
+print(f"Назва континенту: {Country1.get_continent()}")
+print(f"Кількість жителів країни: {Country1.get_population()}")
+print(f"Телефонний код країни: {Country1.get_country_code()}")
+print(f"Назву столиці: {Country1.get_capital()}")
+print(f"Назву міст країни: {Country1.get_cities()}")
+
